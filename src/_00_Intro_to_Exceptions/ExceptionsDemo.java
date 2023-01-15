@@ -1,12 +1,15 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.JOptionPane;
+
 public class ExceptionsDemo {
 
     /*
      * Exceptions make it easier to debug or handle unexpected run time errors
      * when they arise in your programs.
      */
-
+//Compile time error = syntax
+//run time error = logic
     /*
      * The throws keyword in testFiveOrGreater lets the compiler know this
      * method could throw a method and needs a try catch block to handle it.
@@ -39,7 +42,12 @@ public class ExceptionsDemo {
     public static void main(String[] args) {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
-
+    	try {
+			testFiveOrGreater(2);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
@@ -52,6 +60,17 @@ public class ExceptionsDemo {
          */
 
         // 4. Run the program. Did the stack trace print out?
+    	
+    	try {
+			testPositive(-1);
+		} catch (NegativeNumberException e) {
+			// TODO: handle exception
+			e.scaryPopup();
+		}
+    	finally {
+    		JOptionPane.showMessageDialog(null, "jk. Your computer is okay");
+    	}
+    	
 
     }
 
@@ -63,7 +82,8 @@ public class ExceptionsDemo {
      * JOptionPane Message Dialog telling the user they have triggered a
      * critical error in their computer.
      */
-
+    
+    
     /*
      * 7. Create a static method in this class called testPositive. It should
      * take a single number as a parameter and throw a NegativeNumberException
@@ -85,9 +105,16 @@ public class ExceptionsDemo {
      * 9. When the NegativeNumberException is caught, use the caught exception
      * to call your scaryPopup method.
      * 
-     * 10. Try running the program. Did it show a pop-up?
+     * 10. Try running the program. Did it show a pop-up?  -- yes
      */
 
+     public static void testPositive(int num) throws NegativeNumberException {
+    	 if(num <0) {
+    		 throw new NegativeNumberException();
+    	 }
+    	 
+     }
+    
     /*
      * 11. Add a finally block after your catch block(Hint: finally{}). A
      * finally block always occurs after a try/catch block even if no exception
@@ -100,3 +127,6 @@ public class ExceptionsDemo {
      * exceptions.
      */
 }
+
+
+

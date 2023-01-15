@@ -15,6 +15,8 @@ package _02_Intro_To_Abstract_Classes_and_Interfaces;
  * more than one interface at a time. 
  */
 
+// Question on last statement -- which classes? HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
 /*
 * Instead of using the abstract or class keyword. Interfaces have their own 
 * special interface keyword for getting declared.

@@ -13,7 +13,7 @@ import javax.swing.Timer;
 /*
  * 1. Create new member variables for the width and height of Polymorph then 
  * initialize them in its constructor.
- * 
+ *                                                       ON THIS STEP HERE!!!!!!!!!!!!!!!!!!!
  * 2. Encapsulate the member variables of the Polymorph class. 
  * 
  * 3. Substitute the hard-coded numbers in the draw method of the BluePolymorph 
