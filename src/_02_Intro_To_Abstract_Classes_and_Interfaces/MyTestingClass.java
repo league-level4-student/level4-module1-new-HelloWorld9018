@@ -1,7 +1,7 @@
 package _02_Intro_To_Abstract_Classes_and_Interfaces;
 
 public class MyTestingClass extends AbstractClassDemo implements InterfaceDemo, DemoInterface {
-
+	
 	@Override
 	public void abstractDemo() {
 		// TODO Auto-generated method stub
@@ -16,9 +16,10 @@ public class MyTestingClass extends AbstractClassDemo implements InterfaceDemo, 
 /*How do I know what to put in the newly implemented methods..would it vary across all 
 	the classes that extend AbstractClass Demo? */
 	
-	public void main(String[] args) {
-		demo();
-		//num=0;
+	static public void main(String[] args) {
+		MyTestingClass my = new MyTestingClass();
+		my.demo();
+		my.num=0;
 		//how do I set the member variable from AbstractClassDemo equal to something?
 	}
 //is this how I run AbstractClassDemo's implemented method?
